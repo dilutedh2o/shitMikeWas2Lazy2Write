@@ -1,2 +1,2 @@
 #!/bin/bash
-cd ~/ && find -name .git -type d -prune -exec git -C {}/.. status \;
+cd ~/ && find -name .git -type d -prune -exec sh -c "(dirname {} && git -C {}/.. status -s && echo)" \;
