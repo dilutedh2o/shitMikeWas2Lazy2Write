@@ -1,0 +1,2 @@
+#!/bin/bash
+cd ~/ && find -name .git -type d -prune -exec git -C {}/.. status \;
